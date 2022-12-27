@@ -1,0 +1,1283 @@
+@charset "UTF-8";
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Varela+Round&display=swap');
+
+/* TEMA ESCURO */
+
+:root {
+    --cor-texto: #333;
+    --cormenu: rgb(243, 243, 243);
+    --corfundo: white;
+    --color1: #051830;
+    --color2: white;
+    --color3: rgba(153, 153, 153, 0.514);
+    --color4: #333;
+    --color5: #333;
+    --color6: rgba(153, 153, 153, 0.514);
+    --color7: rgba(153, 153, 153, 0.514);
+    --color8: rgb(221,244,221);
+    --color9: rgb(229,244,198);
+    --color10: rgb(251,223,223);
+}
+
+.dark {
+    --cor-texto: white;
+    --cormenu: #273340;
+    --corfundo: #15202b;
+    --color1: #8B89D9;
+    --color2: white;
+    --color3: #8B89D9;
+    --color4: white;
+    --color5: rgba(163, 130, 19, 0.836);
+    --color6: #1c232b;
+    --color7: #333;
+    --color8: #191c59de;
+    --color9: #38358cb2;
+    --color10: #8c89d981;
+}
+
+.temaescuro {
+    color: aliceblue;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: var(--color7);
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease-in-out;
+    transition-duration: 0.3s;
+}
+
+.temaescuro.ativar {
+    transition: ease-in-out;
+    transition-duration: 0.3s;
+    background: var(--color7);
+}
+
+.temaescuro ion-icon {
+    position: absolute;
+    color: var(--cor7);
+    font-size: 34px;
+    display: none;
+}
+
+.temaescuro ion-icon.abrir {
+    transition: ease-in-out;
+    transition-duration: 0.3s;
+    display: block;
+}
+
+.temaescuro.ativar ion-icon.fechar {
+    transition: ease-in-out;
+    transition-duration: 0.3s;
+    display: block;
+
+}
+
+.temaescuro ion-icon.fechar {
+    transition: ease-in-out;
+    transition-duration: 0.3s;
+    display: none;
+}
+
+.temaescuro.ativar ion-icon.abrir {
+    transition: ease-in-out;
+    transition-duration: 0.3s;
+    display: none;
+}
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    padding: 0;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--cor-texto);
+}
+
+body {
+    background-color: var(--corfundo);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* NAVEGAÇÃO */
+
+.logo {
+    font-weight: bold;
+    padding: 25px;
+    color: white;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    font-weight: 550;
+    font-size: 22.5px;
+    transition: ease-in-out;
+    transition-duration: 0.32s;
+}
+
+.logo:hover {
+    letter-spacing: 5px;
+    color: #32c6e0;
+}
+
+.nav {
+    font-family: 'Varela Round', sans-serif;
+    animation: gradiente 10s ease-in-out alternate infinite;
+    background: linear-gradient(-45deg, #7043F7, #3A3DD6, #4C7AED, #2cbada, #2FBC90) no-repeat;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 72px;
+    background-size: 300% 300%;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list > li {
+    cursor: pointer;
+    display: flex;
+    margin-left: 32px;
+    letter-spacing: 1.5px;
+    color: white;
+    transition: ease-in-out;
+    transition-duration: 0.35s;
+}
+
+.nav-option {
+    display: flex;
+    color: white;
+    cursor: pointer;
+    margin-left: 32px;
+    letter-spacing: 1.5px;
+    color: white;
+}
+
+.nav-list > li:hover {
+    color: #32c6e0;
+    text-decoration: underline;
+}
+
+/* CONFIGURAÇÕES DE TEXTOS */
+
+.title {
+    padding-top: 35px;
+    padding-bottom: 25px;
+    color: var(--cor-texto);
+    font-size: 20px;
+    font-weight: none;
+    text-align: center;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+}
+
+.title:hover {
+    cursor: pointer;
+    color: #7043F7;
+}
+
+.sub-title {
+    padding: 15px;
+    color: var(--cor-texto);
+    font-size: 16.5px;
+    font-weight: none;
+    margin-left: 25px;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+}
+
+.sub-title:hover {
+    cursor: pointer;
+    color: #7043F7;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.torneios-recentes {
+    color: #023059;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+/* PÁGINA PRINCIPAL */
+
+.principal {
+    background-color: var(--cormenu);
+    margin: auto;
+    max-width: 1050px;
+    width: 100%;
+}
+
+.blast {
+    background-color: var(--cormenu);
+    margin: auto;
+    max-width: 1350px;
+    width: 100%;
+}
+
+/* FORMATO */
+
+.fase {
+    font-weight: 565;
+    margin-top: 6px;
+    margin-left: 25px;
+}
+
+.dec1 {
+    margin-top: 6px;
+    margin-left: 40px;
+}
+
+.dec2 {
+    margin-top: 6px;
+    margin-left: 60px;
+}
+
+#final {
+    margin-bottom: 25px;
+}
+
+.final2019 {
+    margin-left: 275px;
+    margin-top: -125px;
+}
+
+/* ESPAÇOS */
+
+#espaco-cima {
+    margin-top: 50px;
+}
+
+#espaco-baixo {
+    margin-bottom: 50px;
+}
+
+/* TABELAS */
+
+table {
+    border-collapse: collapse;
+}
+
+.table-cima {
+    display: grid;
+    align-items: right;
+    justify-content: flex-end;
+    padding-right: 100px;
+    margin-top: -400px;
+}
+
+.table-2018 {
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+td {
+    background-color: var(--color2);
+    min-width: 15px;
+    color: #414141;
+    font-weight: 550;
+    text-align: center;
+    border: 1px solid #71717180;
+    padding: 7.5px;
+    border-collapse: collapse;
+}
+
+tr {
+    border-collapse: collapse;
+}
+
+.lugar {
+    color: white;
+    background-color: #023059;
+}
+
+.time {
+    color: white;
+    background-color: #023059;
+}
+
+.premio {
+    color: white;
+    background-color: #023059;
+}
+
+#primeiro {
+    color: white;
+    text-shadow: 1px 1px rgb(64 64 64 / 40%), 1px -1px rgb(64 64 64 / 40%), -1px -1px rgb(64 64 64 / 40%), -1px 1px rgb(64 64 64 / 40%);
+    background-color: #ffe982;
+}
+
+#segundo {
+    color: white;
+    text-shadow: 1px 1px rgb(64 64 64 / 40%), 1px -1px rgb(64 64 64 / 40%), -1px -1px rgb(64 64 64 / 40%), -1px 1px rgb(64 64 64 / 40%);
+    background-color: #eeeeee;
+}
+
+#terceiro {
+    color: white;
+    text-shadow: 1px 1px rgb(64 64 64 / 40%), 1px -1px rgb(64 64 64 / 40%), -1px -1px rgb(64 64 64 / 40%), -1px 1px rgb(64 64 64 / 40%);
+    background-color: #f9e8c7;
+}
+
+#position1 {
+    color: white;
+    text-shadow: 1px 1px rgb(64 64 64 / 40%), 1px -1px rgb(64 64 64 / 40%), -1px -1px rgb(64 64 64 / 40%), -1px 1px rgb(64 64 64 / 40%);
+    background-color: #32c6e0;
+}
+
+#position2 {
+    color: white;
+    text-shadow: 1px 1px rgb(64 64 64 / 40%), 1px -1px rgb(64 64 64 / 40%), -1px -1px rgb(64 64 64 / 40%), -1px 1px rgb(64 64 64 / 40%);
+    background-color: #007F99;
+}
+
+#position3 {
+    color: white;
+    text-shadow: 1px 1px rgb(64 64 64 / 40%), 1px -1px rgb(64 64 64 / 40%), -1px -1px rgb(64 64 64 / 40%), -1px 1px rgb(64 64 64 / 40%);
+    background-color: #166F82;
+}
+
+#position4 {
+    color: white;
+    text-shadow: 1px 1px rgb(64 64 64 / 40%), 1px -1px rgb(64 64 64 / 40%), -1px -1px rgb(64 64 64 / 40%), -1px 1px rgb(64 64 64 / 40%);
+    background-color: #2D606B;
+}
+
+#colorido {
+    background: #023059;
+    color: white;
+}
+
+#esquerda {
+    margin-left: 100px;
+}
+
+/* GRID PARTICIPANTES */
+
+.grid1 {
+    margin-top: 40px;
+    margin-left: 115px;
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 10px;
+    max-width: 150px;
+}
+
+.grid-blast {
+    margin-top: 40px;
+    margin-left: 275px;
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 10px;
+    max-width: 150px;
+}
+
+.imagem {
+    padding: 50px;
+    cursor: pointer;
+    padding: 10px;
+    max-width: 125px;
+    height: 75%;
+    max-height: 125px;
+    transition: ease-in-out;
+    transition-duration: 0.25s;
+}
+
+.imagem:hover {
+    margin-top: -5px;
+}
+
+#juventus {
+    margin-left: 30px;
+}
+
+#real {
+    margin-left: 15px;
+}
+
+#margem {
+    margin-left: 10px;
+}
+
+#meio {
+    margin-left: 7.5px;
+}
+
+#river {
+    margin-left: 10px;
+}
+
+.mata-mata {
+    cursor: pointer;
+    text-align: left;
+    width: 135px;
+    transition: ease-in-out;
+    transition-duration: 0.35s;
+}
+
+#left {
+    cursor: pointer;
+    text-align: left;
+}
+
+.mata-mata:hover {
+    box-shadow: 0 0 1em rgb(206, 227, 245);
+}
+
+.grid_p {
+    font-weight: bold;
+    transition-duration: 0.5s;
+    transition: ease-in-out;
+    cursor: pointer;
+    color: var(--cor-texto);
+    font-weight: 565;
+    text-align: center;
+    width: 135px;
+}
+
+.grid_p:hover {
+    text-decoration: underline;
+}
+
+.classe_legends {
+    font-size: 20px;
+    color: var(--color1);
+    margin: auto;
+    width: 180px;
+    transition: ease-in-out;
+    transition-duration: 0.25s;
+}
+
+.classe_legends:hover {
+    cursor: pointer;
+    padding: 5px;
+    border-bottom: 1px solid var(--color1);
+}
+
+.classe_desafiantes {
+    font-size: 20px;
+    color: var(--color1);
+    margin: 25px auto 0 auto;
+    width: 215px;
+    transition: ease-in-out;
+    transition-duration: 0.25s;
+}
+
+.classe_desafiantes:hover {
+    cursor: pointer;
+    padding: 5px;
+    border-bottom: 1px solid var(--color1);
+}
+
+.nome-time {
+    cursor: pointer;
+    text-align: center;
+    font-weight: 565;
+    color: var(--color4);
+    transition: ease-in-out;
+    transition-duration: 0.3s;
+}
+
+.nome-time:hover {
+    color: rgba(163, 130, 19, 0.836);;
+}
+
+/* TABELA CAMPEONATO CHALLENGERS */
+
+.classificacao1 {
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.grupo {
+    margin-top: 35px;
+    margin-left: 50px;
+}
+
+.nome-equipe {
+    cursor: pointer;
+    text-align: left;
+    width: 200px;
+    transition: ease-in-out;
+    transition-duration: 0.35s;
+}
+
+.nome-equipe:hover {
+    box-shadow: 0 0 1em rgb(206, 227, 245);
+}
+
+#primeiros {
+    color: var(--cor-texto);
+    background: var(--color8);
+}
+
+#segundos {
+    color: var(--cor-texto);
+    background-color: var(--color9);
+}
+
+#eliminados {
+    color: var(--cor-texto);
+    background-color: var(--color10);
+}
+
+#primeiros-mata {
+    text-align: right;
+    color: var(--cor-texto);
+    background: var(--color8);
+}
+
+#mata {
+    text-align: right;
+}
+
+.mini-logo {
+    vertical-align: center;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 7.5px;
+    max-height: 17.5px;
+    max-width: 25px;
+    transition: ease-in-out;
+    transition-duration: 0.3s;
+}
+
+.mini-logo:hover {
+    color: #023059;
+}
+
+#mata-mata-logo {
+    text-align: right;
+}
+
+#juventus-mini {
+    margin-left: 15px;
+}
+
+/* CONFIGURAÇÕES JOGOS MATA-MATA */
+
+.jogo1 {
+    margin-left: 50px;
+    margin-top: 15px;
+}
+
+.jogo2 {
+    margin-left: 50px;
+    margin-top: 35px;
+}
+
+.final {
+    margin-left: 200px;
+    margin-top: -165px;
+}
+
+.teste {
+    margin-top: 150px;
+}
+
+.placar {
+    border: none;
+    width: 35px;
+}
+
+
+/* SIMULAÇÃO */
+
+.simule {
+    text-align: justify;
+    color: var(--cor-texto);
+    margin-left: 40px;
+    margin-bottom: 25px;
+    width: 500px;
+}
+
+.enviar1 {
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 85px;
+    color: white;
+    border: none;
+    border-radius: 7.5px;
+    padding: 3.5px;
+    background-color:#051830;
+}
+
+.enviar2 {
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 85px;
+    color: white;
+    border: none;
+    border-radius: 7.5px;
+    padding: 3.5px;
+    background-color:#051830;
+}
+
+#res {
+    color: rgb(136, 27, 36);
+}
+
+/* CONFIGURAÇÕES RANKING TOP20 */
+
+.raking-table {
+    box-shadow: 0 0 10px rgb(206, 227, 245);
+}
+
+.div-ranking {
+    padding: 10px;
+    line-height: 10px;
+    width: 800px;
+    transition: ease-in-out;
+    transition-duration: 0.2s;
+}
+
+.div-ranking:hover {
+    cursor: pointer;
+    box-shadow: 0 0 1em rgb(206, 227, 245);
+}
+
+.imagem-ranking {
+    max-height: 30px;
+    max-width: 30px;
+}
+
+.nome-ranking {
+    margin-left: 25px;
+    text-align: left;
+    width: 300px;
+}
+
+.pontuacao-ranking {
+    text-align: left;
+    width: 150px;
+}
+
+.fileira {
+    text-align: left;
+    width: 600px;
+}
+
+#equipe-ranking20 {
+    padding: 10px;
+    line-height: 10px;
+    border: none;
+    background-color: aliceblue;
+}
+
+#ranking-sub-title {
+    cursor: default;
+    padding: 35px;
+    color: var(--cor-texto);
+    font-size: 20px;
+    font-weight: none;
+    text-align: center;
+    background: white;
+}
+
+/* CAMPEONATOS ANTERIORES */
+
+.campeonato-anterior {
+    color: #166F82;
+    text-align: left;
+    margin-left: 50px;
+}
+
+.campeonato-futuro {
+    color: #166F82;
+    margin-left: 500px;
+}
+
+/* CONFIG TORNEIOS */
+
+.container {
+    display: grid;
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px;
+}
+
+.foto-container {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    max-height: 150px;
+    max-width: 300px;
+}
+
+.container-div {
+    height: 250px;
+    margin: auto;
+}
+
+.p-torneio {
+    text-align: center;
+}
+
+.h1-torneio {
+    text-align: center;
+}
+
+.realizado {
+    font-weight: 565;
+    color: #6e0c24d5;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.nao-realizado {
+    font-weight: 565;
+    color: #54711b;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* TABLE QUALIFIERS */
+
+.qualifier {
+    margin-top: 15px;
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* RODADAS */
+
+.rodadas {
+    display: grid;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 45px;
+    margin-bottom: -25px;
+}
+
+.rodada {
+    cursor: default;
+    background: #023059;
+    color: white;
+}
+
+.sub-rodada {
+    cursor: default;
+    padding: 3.5px;
+    height: 5px;
+    background: #023059;
+    color: white;
+    font-size: 11.5px;
+}
+
+/* SISTEMA DE QUARTAS DE FINAIS */
+
+.semi1-quartas {
+    margin-top: -115px;
+    margin-left: 265px;
+}
+
+.semi2-quartas {
+    margin-top: -250px;
+    margin-left: 265px;
+}
+
+.semi4-quartas {
+    margin-top: -115px;
+    margin-left: 265px;
+}
+
+.semi3-quartas {
+    margin-top: -250px;
+    margin-left: 265px;
+}
+
+.final-quartas {
+    margin-top: 15px;
+    margin-left: 465px;
+}
+
+/* SISTEMA DE OITAVAS DE FINAL */
+
+.quartas1 {
+    margin-top: -644px;
+    margin-left: 265px;
+}
+
+.quartas2 {
+    margin-top: -250px;
+    margin-left: 265px;
+}
+
+.quartas3 {
+    margin-top: 268px;
+    margin-left: 265px;
+}
+
+.quartas4 {
+    margin-top: -115px;
+    margin-left: 265px;
+}
+
+.semi1 {
+    margin-top: 187px;
+    margin-left: 465px;
+}
+
+.semi2 {
+    margin-top: -410px;
+    margin-left: 465px;
+}
+
+.final-blast {
+    margin-top: 85px;
+    margin-left: 665px;
+}
+
+.final-blast2 {
+    margin-top: -80px;
+    margin-left: 885px;
+}
+
+.padding-final {
+    padding-bottom: 350px;
+}
+
+/* SISTEMA DE LOWERS DE MATA MATA GRANDE */
+
+.jogo1-lower {
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+.quartas1-lower {
+    margin-top: 15px;
+    margin-left: 225px;
+}
+
+.quartas2-lower {
+    margin-top: -174px;
+    margin-left: 225px;
+}
+
+.quartas3-lower {
+    margin-top: 109px;
+    margin-left: 225px;
+}
+
+.quartas4-lower {
+    margin-top: -364px;
+    margin-left: 225px;
+}
+
+.semi1-lower {
+    margin-top: -40px;
+    margin-left: 425px;
+}
+
+.semi2-lower {
+    margin-top: -250px;
+    margin-left: 425px;
+}
+
+.final-blast-lower1 {
+    margin-top: 92px;
+    margin-left: 625px;
+}
+
+.final-blast-lower2 {
+    margin-top: -250px;
+    margin-left: 625px;
+}
+
+.final-blast-lower3 {
+    margin-top: 9px;
+    margin-left: 820px;
+}
+
+.final-blast-lower4 {
+    margin-top: -80px;
+    margin-left: 1020px;
+}
+
+
+/* SISTEMA IEM */
+
+.semi-iem1 {
+    margin-left: 250px;
+    margin-top: -80px;
+}
+
+.semi-iem2 {
+    margin-left: 250px;
+    margin-top: -175px;
+}
+
+.final-iem {
+    margin-top: -25px;
+    margin-left: 450px;
+}
+
+/* PAGAMENTO */
+
+.pagamento {
+    margin: 100px auto 0px auto;
+    background-color: rgb(234, 236, 236);
+    width: 600px;
+    border: 1px solid #71717173;
+    border-radius: 10px;
+}
+
+.body-doacoes {
+    background: url(fotos/pagamento2.gif);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    transition: ease-in-out;
+}
+
+.doacoes {
+    text-align: center;
+    padding: 20px;
+    font-size: 22.5px;
+    color: #023059;
+}
+
+.campo {
+    margin-left: 50px;
+    color: #023059;
+    font-size: 15.5px;
+}
+
+.input1 {
+    padding: 5px;
+    border: 1px solid #71717156;
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+.input2 {
+    padding: 5px;
+    border: 1px solid #71717156;
+    width: 500px;
+    margin-bottom: 5px;
+}
+
+.input3 {
+    padding: 5px;
+    border: 1px solid #71717156;
+    width: 242px;
+}
+
+.valor {
+    padding: 5px;
+    border: 1px solid #71717156;
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+.tipo-cartao {
+    padding: 5px;
+    border: 1px solid #71717156;
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+.botao {
+    margin: 50px 0px 35px 265px; 
+    position: relative;
+    padding: 5px;
+    width: 70px;
+    height: 30px;
+    background-color: #202231;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: width 0.5s, border-radius 0.5s ease-in-out;
+}
+
+.botao *{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.25s;
+}
+
+.text {
+    color: #dddd;
+}
+
+.icon {
+    color: white;
+    opacity: 0;
+}
+
+.botao:focus {
+    margin: 50px 0px 35px 285px; 
+    width: 30px;
+    background-color: #44c88a;
+    border-radius: 50%;
+}
+
+.botao:focus .text {
+    opacity: 0;
+}
+
+.botao:focus .icon {
+    color: white;
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1050px) {
+    .campeonato-futuro {
+        margin-left: 400px;
+    }
+}
+
+@media (max-width: 950px) {
+    .temaescuro {
+        top: 50px;
+    }
+    .campeonato-futuro {
+        margin-left: 300px;
+    }
+}
+
+@media (max-width: 850px) {
+    .qualifier {
+        margin-left: 25px;
+    }
+    .grid1 {
+        margin-left: 25px;
+    }
+    .table-cima {
+        margin-top: 0;
+        margin-left: 25px;
+    }
+    .campeonato-futuro {
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 785px) {
+    .grid1 {
+        margin-left: 150px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .campeonato-futuro {
+        margin-left: 100px;
+    }
+}
+
+@media (max-width: 750px) {
+    .quartas1 {
+        margin-left: 175px;
+    }
+    .quartas2 {
+        margin-left: 175px;
+    }
+    .quartas3 {
+        margin-left: 175px;
+    }
+    .quartas4 {
+        margin-left: 175px;
+    }
+    .semi1 {
+        margin-top: 187px;
+        margin-left: 345px;
+    }
+    .semi2 {
+        margin-top: -410px;
+        margin-left: 345px;
+    }
+    .final-blast {
+        margin-top: 85px;
+        margin-left: 625px;
+    }
+    .nav-list > li {
+        font-size: 12.5px;
+    }
+    .grid1 {
+        margin-top: 40px;
+        margin-left: 50px;
+        display: grid;
+        grid-gap: 50px;
+        grid-template-columns: 1fr 1fr;
+        padding: 10px;
+        max-width: 150px;
+    }
+    .container {
+        display: grid;
+        margin: auto;
+        grid-template-columns: 1fr 1fr;
+        padding: 10px;
+        grid-gap: 15px;
+    }
+    .nav-option {
+        font-size: 15px;
+        display: flex;
+        color: white;
+        cursor: pointer;
+        margin-left: 10px;
+        letter-spacing: 1.5px;
+        color: white;
+    }
+    .table-cima {
+        margin-top: 0;
+        margin-left: 25px;
+    }
+    .classificacao1 {
+        margin-top: 35px;
+        margin-left: 0px;
+    }
+    .sub-title {
+        margin-left: 0px;
+        text-align: center;
+    }
+    .rodadas {
+        margin-left: 15px;
+    }
+    .nav-list > li {
+        margin-left: 16px;
+    }
+    .campeonato-futuro {
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 640px) {
+    .mata-mata {
+        width: 100px;
+        height: 23px;
+    }
+    .qualifier {
+        margin-left: 10px;
+    }
+    .jogo1 {
+        margin-left: 10px;
+    }
+    .jogo2 {
+        margin-left: 10px;
+    }
+    .semi1-quartas {
+        margin-left: 205px;
+    }
+    .semi2-quartas {
+        margin-left: 205px;
+    }
+    .final-quartas {
+        margin-left: 405px;
+    }
+}
+
+@media (max-width: 550px) {
+    .qualifier {
+        margin-left: 0px;
+    }
+    .container {
+        display: grid;
+        margin: auto;
+        grid-template-columns: 1fr;
+    }
+    .container-div {
+        height: 225px;
+    }
+    .sub-title {
+        text-align: center;
+    }
+    .nav-option {
+        margin-left: 0px;
+    }
+    .classificacao1 {
+        margin-top: 35px;
+        margin-left: 0px;
+    }
+    .final2019 {
+        margin-left: 200px;
+    }
+    .pagamento {
+        margin: 100px auto 0px auto;
+        width: 300px;
+    }
+    .input1 {
+        width: 200px;
+    }
+    .input2 {
+        width: 200px;
+    }
+    .input3 {
+        padding: 5px;
+        border: 1px solid #71717156;
+        width: 92px;
+    }
+    .valor {
+        width: 200px;
+    }
+    .tipo-cartao {
+        width: 200px;
+    }
+    .botao {
+        margin: 50px 0px 35px 115px; 
+    }
+    .botao:focus {
+        margin: 50px 0px 35px 135px; 
+    }
+    .campeonato-anterior {
+        margin-left: 5px;
+    }
+    .campeonato-futuro {
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    .grid1 {
+        margin-left: 25px;
+    }
+    .table-cima {
+        margin-left: 10px;
+    }
+    .classificacao1 {
+        margin-left: 0px;
+    }
+    .rodadas {
+        margin-left: 0px;
+    }
+    .logo {
+        font-size: 19.5px;
+        padding: 5px;
+    }
+}
+
+/* ANIMAÇÕES */
+
+@keyframes gradiente {
+    from {
+        background-position: 0 50%;
+    }
+    to {
+        background-position: 100% 50%;
+    }
+}
